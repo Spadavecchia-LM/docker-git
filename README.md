@@ -18,12 +18,12 @@ cd SPADAVECCHIALEONARDO
 # revisar que docker desktop este abierto y funcionando
 
 ```bash
-docker build -t spadavecchia-docker .
+docker build -t nginx-template .
 ```
 ### 4. Levantar el contenedor con Docker
 
 ```bash
-docker run -d -p 8080:80 --name nginx-site mi-sitio-nginx
+docker run -d -p 8080:80 --name spadavecchia nginx-template
 ```
 
 Esto iniciará un contenedor en segundo plano y expondrá el sitio en `http://localhost:8080`
@@ -34,4 +34,18 @@ Abrí tu navegador y visitá:
 http://localhost:8080
 ```
 
-Deberías ver el sitio con el mensaje "¡Hola mundo desde Nginx!"
+Deberías ver el sitio con el mensaje "¡Hola mundo desde Nginx!" y un subtitulo con mi nombre y apellido "leonardo spadavecchia"
+
+### comandos utiles
+
+## para apagar el contendeor 
+
+```bash
+docker stop spadavecchia
+```
+
+para prender el contenedor (si la imagen ya fue creada)
+
+```bash
+docker start spadavecchia
+```
