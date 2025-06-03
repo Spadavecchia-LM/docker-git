@@ -1,51 +1,73 @@
-# docker-git
-Trabajo practico para la materia de ingenieria del software
+# 🐳 Docker + Git
 
-# Mi sitio en Nginx + Docker
+> Trabajo práctico para la materia **Ingeniería del Software**
 
-Este es un proyecto simple que sirve una página HTML estática usando la imagen oficial de Nginx en Docker.
+## 📋 Descripción
 
-## 🚀 Cómo usar
+Este proyecto implementa un sitio web estático utilizando **Nginx** dentro de un contenedor **Docker**. Se sirve una página HTML simple con un mensaje personalizado.
 
-### 1. Clonar el repositorio
+## 🛠️ Tecnologías utilizadas
+
+- **Docker** – Containerización
+- **Nginx** – Servidor web
+- **HTML** – Página estática
+- **Git** – Control de versiones
+
+---
+
+## 🚀 Inicio rápido
+
+### ✅ Prerrequisitos
+
+- **Docker Desktop** instalado y ejecutándose
+- **Git** instalado
+
+---
+
+### 1️⃣ Clonar el repositorio
 
 ```bash
 git clone https://github.com/Spadavecchia-LM/docker-git.git
-cd SPADAVECCHIALEONARDO
+cd docker-git
+```
 
-### 3. Construir la imagen Docker
-
-# revisar que docker desktop este abierto y funcionando
+### 2️⃣ Construir la imagen Docker
 
 ```bash
 docker build -t nginx-template .
 ```
-### 4. Levantar el contenedor con Docker
+
+### 3️⃣ Ejecutar el contenedor
 
 ```bash
 docker run -d -p 8080:80 --name spadavecchia nginx-template
 ```
 
-Esto iniciará un contenedor en segundo plano y expondrá el sitio en `http://localhost:8080`
+### 4️⃣ Verificar el funcionamiento
 
 Abrí tu navegador y visitá:
 
-```
-http://localhost:8080
-```
+[http://localhost:8080](http://localhost:8080)
 
-Deberías ver el sitio con el mensaje "¡Hola mundo desde Nginx!" y un subtitulo con mi nombre y apellido "leonardo spadavecchia"
+Deberías ver el mensaje:
 
-### comandos utiles
+> "¡Hola mundo desde Nginx!"  
+> Subtítulo: **Leonardo Spadavecchia**
 
-## para apagar el contendeor 
+---
 
-```bash
-docker stop spadavecchia
-```
+## 🔧 Comandos útiles
 
-para prender el contenedor (si la imagen ya fue creada)
+| Acción                  | Comando                                |
+|-------------------------|----------------------------------------|
+| Apagar contenedor       | `docker stop spadavecchia`            |
+| Levantar contenedor     | `docker start spadavecchia`           |
+| Eliminar contenedor     | `docker rm spadavecchia`              |
+| Reiniciar contenedor    | `docker restart spadavecchia`         |
 
-```bash
-docker start spadavecchia
-```
+---
+
+## 👨‍💻 Autor
+
+**Leonardo Spadavecchia**  
+Trabajo práctico para la materia **Ingeniería del Software**
